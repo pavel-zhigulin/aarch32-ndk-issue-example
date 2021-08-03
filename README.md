@@ -1,5 +1,5 @@
 # What is it
-This is a code example for issue:
+This is a code example for issue: https://github.com/android/ndk/issues/1555
 
 # How to reproduce issue on Ubuntu 20.04.2 LTS
 
