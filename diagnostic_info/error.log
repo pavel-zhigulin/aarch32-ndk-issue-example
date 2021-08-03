@@ -1,0 +1,29 @@
+"/opt/android-ndk-r22b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang" --target=armv7a-linux-androideabi23 -c -fPIC -std=c99 -Wall -Wextra -Wno-unused-label -fPIC -fvisibility=hidden -O3 -Werror -g -DNDEBUG -mfpu=neon -mfloat-abi=hard ./test.c -o ./test.o
+PLEASE submit a bug report to https://github.com/android-ndk/ndk/issues and include the crash backtrace, preprocessed source, and associated run script.
+Stack dump:
+0.      Program arguments: /opt/android-ndk-r22b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=armv7a-linux-androideabi23 -c -fPIC -std=c99 -Wall -Wextra -Wno-unused-label -fPIC -fvisibility=hidden -O3 -Werror -g -DNDEBUG -mfpu=neon -mfloat-abi=hard ./test.c -o ./test.o 
+1.      <eof> parser at end of file
+2.      Code generation
+3.      Running pass 'Function Pass Manager' on module './test.c'.
+4.      Running pass 'ARM Instruction Selection' on function '@main'
+#0 0x0000000003456ac5 llvm::sys::PrintStackTrace(llvm::raw_ostream&) (/opt/android-ndk-r22b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang+0x3456ac5)
+#1 0x0000000003456960 llvm::sys::RunSignalHandlers() (/opt/android-ndk-r22b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang+0x3456960)
+#2 0x0000000003425250 (/opt/android-ndk-r22b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang+0x3425250)
+#3 0x000000000342540c (/opt/android-ndk-r22b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang+0x342540c)
+#4 0x00007f71d5d923c0 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x153c0)
+#5 0x0000000002ae0fe4 (/opt/android-ndk-r22b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang+0x2ae0fe4)
+clang: error: clang frontend command failed due to signal (use -v to see invocation)
+Android (7155654, based on r399163b1) clang version 11.0.5 (https://android.googlesource.com/toolchain/llvm-project 87f1315dfbea7c137aa2e6d362dbb457e388158d)
+Target: armv7a-unknown-linux-android23
+Thread model: posix
+InstalledDir: /opt/android-ndk-r22b/toolchains/llvm/prebuilt/linux-x86_64/bin
+clang: note: diagnostic msg: 
+********************
+
+PLEASE ATTACH THE FOLLOWING FILES TO THE BUG REPORT:
+Preprocessed source(s) and associated run script(s) are located at:
+clang: note: diagnostic msg: /tmp/test-5eaeb0.c
+clang: note: diagnostic msg: /tmp/test-5eaeb0.sh
+clang: note: diagnostic msg: 
+
+********************
